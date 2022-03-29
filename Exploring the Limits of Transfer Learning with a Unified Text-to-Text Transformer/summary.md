@@ -1,4 +1,4 @@
-# Exploring the Limits of Transfer Learning with a Unified Text-to-Text Transformer
+# Summary
 - https://arxiv.org/abs/1910.10683
 
 - どんなもの?
@@ -18,4 +18,3 @@
 - 次に読むべき論文は?
   - relative position embedding
     - https://arxiv.org/pdf/1803.02155.pdf
-  - 
