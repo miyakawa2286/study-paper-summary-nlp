@@ -33,7 +33,9 @@
 - none
 
 ## 次に読むべき論文は?
-- none
+- [continually pre-train model on large in-domain unlabeld data](https://aclanthology.org/2020.acl-main.740.pdf)
+- [weakly labeled data archive good performance](https://dl.acm.org/doi/10.1145/3394486.3403149)
+- [weakly labeled data archive good performance](https://aclanthology.org/D18-1230/)
 
 ## 不明な単語
 - none
