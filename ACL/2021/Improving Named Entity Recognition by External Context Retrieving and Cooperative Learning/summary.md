@@ -12,6 +12,10 @@
 - 外部のリソースからcontextsを持って生きているところ?
   - LUKEは学習データからcontextsを持ってきている?
 
+## 技術や手法の概要
+- 外部contextsは結局, 元のinput tokenと一緒にtransformer-encoderに入力され, embeddingになりCRFに入力される
+  - ![](img/figure2.png)
+
 ## 技術や手法の肝は?
 - contextsを検索エンジンから引っ張てくる際に, 意味的関連性に基づいてrank付けを行っているところ
 - Cooperative Learning(CL)を導入し, 入力にcontextsがない場合においても, contextsがある場合と同じtoken embeddingあるいはCRFの出力が得られるようにLossを設計しているところ
