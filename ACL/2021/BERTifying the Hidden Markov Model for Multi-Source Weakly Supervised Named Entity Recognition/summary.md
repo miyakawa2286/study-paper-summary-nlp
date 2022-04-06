@@ -1,5 +1,5 @@
-# Title
-- Paper: BERTifying the Hidden Markov Model for Multi-Source Weakly Supervised Named Entity Recognition
+# BERTifying the Hidden Markov Model for Multi-Source Weakly Supervised Named Entity Recognition
+- Paper: https://aclanthology.org/2021.acl-long.482/
 - Code: https://github.com/Yinghao-Li/CHMM-ALT
 - Organization: Georgia Institute of Technology, Atlanta, USA
 
