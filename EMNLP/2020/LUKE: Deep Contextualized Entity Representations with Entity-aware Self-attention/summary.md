@@ -33,11 +33,12 @@
 - エンティティをtokenとして扱う
   - そのためエンティティの関係性を直接モデリングすることができる
 - エンティティがアノテーションされたデータセットで事前学習を行っている
+  - Wikipediaのハイパーリンクをエンティティアノテーションとして利用
 - self-attentionを拡張したentity-aware self-attentionを提案
+  - positional encodingの後ろに, entity type embeddingを追加.
   - ４種類のクエリ行列を準備している(クエリの計算方法は同じ)
   - tokenのタイプ(word or entity)によってクエリ行列を分けている
   - ![](img/figure2.png)
-- Wikipediaのハイパーリンクをエンティティアノテーションとして利用
 
 ## どうやって有効だと検証した?
 - NERを含む5つのタスクで実証実験を行った. NERの評価にはCoNLL 2003を使用.
