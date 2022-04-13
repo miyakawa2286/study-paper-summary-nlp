@@ -2,6 +2,8 @@
 - Paper: https://aclanthology.org/2021.acl-long.206.pdf
 - Code: https://github.com/Alibaba-NLP/ACE
 - Organization: School of Information Science and Technology, ShanghaiTech University, China
+- Author: Wang et el.
+- Year: 2021
 
 ## どんなもの?
 - 構造学習(structure learning, structure prediction)において, ことなるタイプのembedding(contextualized like ELMo, BERT, and non-contextualized like word2vec, GloVe, fastText, character embeddingなど)を結合することにより, より良い単語表現が獲得されることが報告されている.
@@ -12,7 +14,7 @@
 
 ## 先行研究と比べてどこがすごい?
 - 構造学習の結合embedding選択問題に, NASのアプローチを適用しているところ?
-  - 従来の構造学習においてどのように選択していたのか, 記載がない
+  - 従来の構造学習におけるembedding選択問題を初めて提起している?
 - 計算コストが小さい?
   - 単体のGPUかつ, 数時間で学習が完了する
   - 通常のアーキテクチャ探索に使用されるNASは, 数千時間ほどかかる(2018年の報告)
