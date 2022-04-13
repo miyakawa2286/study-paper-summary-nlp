@@ -1,0 +1,30 @@
+"sentence superiority effect” > UnNatural Language Inference
+BLEU > Vocabulary Learning via Optimal Transport for Neural Machine Translation
+Byte-Pair Encoding, BPE > Vocabulary Learning via Optimal Transport for Neural Machine Translation
+C-GCN > Learning from Noisy Labels for Entity-Centric Information Extraction
+Distant supervision > Learning from Noisy Labels for Entity-Centric Information Extraction
+MRC, machine reading comprehension > Leveraging Type Descriptions for Zero-shot Named Entity Recognition and Classification
+Marginal Utility > Vocabulary Learning via Optimal Transport for Neural Machine Translation
+NAS > Automated Concatenation of Embeddings for Structured Prediction
+coreference resolution > Structured Prediction in NLP -- A survey
+cross-attention > Leveraging Type Descriptions for Zero-shot Named Entity Recognition and Classification
+domain-specific dictionaries > BERTifying the Hidden Markov Model for Multi-Source Weakly Supervised Named Entity Recognition
+embedding venders > Automated Concatenation of Embeddings for Structured Prediction
+emission matrix in HMM > BERTifying the Hidden Markov Model for Multi-Source Weakly Supervised Named Entity Recognition
+event extraction > BERTifying the Hidden Markov Model for Multi-Source Weakly Supervised Named Entity Recognition
+layer normalization > LUKE: Deep Contextualized Entity Representations with Entity-aware Self-attention
+lookup feature > Named entity recognition architecture combining contextual and global features
+ner donwstream task > Locate and Label: A Two-stage Identifier for Nested Named Entity Recognition
+ner subtask > Leveraging Type Descriptions for Zero-shot Named Entity Recognition and Classification
+relationship extraction > BERTifying the Hidden Markov Model for Multi-Source Weakly Supervised Named Entity Recognition
+semantic role labeling > BERTifying the Hidden Markov Model for Multi-Source Weakly Supervised Named Entity Recognition
+subword pooling > FLERT: Document-Level Features for Named Entity Recognition
+パレート最適化 > Vocabulary Learning via Optimal Transport for Neural Machine Translation
+フォノロジー(音韻論) > Including Signed Languages in Natural Language Processing
+モダリティ > Including Signed Languages in Natural Language Processing
+多項式時間 > Vocabulary Learning via Optimal Transport for Neural Machine Translation
+最適輸送問題 > Vocabulary Learning via Optimal Transport for Neural Machine Translation
+構造学習(structured prediction) > Automated Concatenation of Embeddings for Structured Prediction
+線形計画法 > Vocabulary Learning via Optimal Transport for Neural Machine Translation
+自然言語推論(Natural Language Infernece, NLI) > UnNatural Language Inference
+自然言語理解(Natural Language Understanding, NLU) > UnNatural Language Inference
