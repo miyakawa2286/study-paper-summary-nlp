@@ -2,6 +2,8 @@
 - Paper: 
 - Code: 
 - Organization: 
+- Author: 
+- Year: 
 
 ## どんなもの?
 - none
