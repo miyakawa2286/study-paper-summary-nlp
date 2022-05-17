@@ -11,8 +11,7 @@
 - MLMの問題点: 
   1. マスクされた単語間の依存関係が考慮されない
   2. BERTのMLMで使用される特殊トークン[Mask]は, 事前学習のときにしか存在せず, fine-tuningではでてこない(pretrain-finetune discrepancy問題)
-- XLNetとは, ざっくりいうと, AR言語モデルとAE言語モデルのいいとこどりをしたモデル.
-  - 双方向に文脈を考慮できるAR言語モデルが最強!
+- BERTの強力な特徴である“双方向の言語モデル”という特徴を残しながら, マスクを使った言語モデルの学習をしない方法を考えた.
 
 ## 先行研究と比べてどこがすごい?
 - none
@@ -35,7 +34,11 @@
 ## 感想
 - すごい読みづらかった
 - Independence Assumptionがしっくりこない
-  - 最終的にはmaskのembeddingのみに依存してsofxmaxを計算するが,...
-  - maskのembeddingは, そのほかのtokenのvalueの重み付き和で計算されるので, 独立しているとは言えないのでは?
+  - 最終的にはmaskのembeddingのみに依存してsofxmaxを計算するが...maskのembeddingは, そのほかのtokenのvalueの重み付き和で計算されるので, 独立しているとは言えないのでは?
+  - 参考: [楽しみながら理解するAI・機械学習入門](https://data-analytics.fun/2020/05/06/understanding-xlnet/)
+    - ![](img/figure9.png)
+    - ![](img/figure10.png)
+    - ![](img/figure7.png)
+    - ![](img/figure8.png)
 - pretrain-finetune discrepancy問題って実際, モデルのパフォーマンスにどの程度影響するのだろうか
 - 2.2まで読んだ@2022-05-17
