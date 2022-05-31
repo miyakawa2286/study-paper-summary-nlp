@@ -89,6 +89,8 @@
 - Transformer decoder [34]
   - This model applies a multi-headed self-attention operation over the input context tokens followed by position-wise feedforward layers to produce an output distribution over target tokens
 - traversal-style approach [52]
+- GPT-2
+  - https://d4mucfpksywv.cloudfront.net/better-language-models/language_models_are_unsupervised_multitask_learners.pdf
 
 ## 不明な単語
 - none
