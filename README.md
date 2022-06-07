@@ -31,3 +31,10 @@
   - [BART: Denoising Sequence-to-Sequence Pre-training for Natural Language Generation, Translation, and Comprehension](https://arxiv.org/abs/1910.13461)
   - [Finetuned Language Models Are Zero-Shot Learners](https://arxiv.org/abs/2109.01652)
 - [BitFit: Simple Parameter-efficient Fine-tuning for Transformer-based Masked Language-models](https://aclanthology.org/2022.acl-short.1/)
+
+## 参考
+### 論文リスト
+- [Must-Read Papers on Pre-trained Language Models (PLMs)](https://github.com/thunlp/PLMpapers)
+- [東京大学深層学習（Deep Learning基礎講座2022）深層学習と自然言語処理](https://speakerdeck.com/verypluming/dong-jing-da-xue-shen-ceng-xue-xi-deep-learningji-chu-jiang-zuo-2022-shen-ceng-xue-xi-tozi-ran-yan-yu-chu-li?slide=68)
+### 論文検索システム
+- [Elicit](https://elicit.org/search) (GPT-3の応用)
