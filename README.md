@@ -35,6 +35,6 @@
 ## 参考
 ### 論文リスト
 - [Must-Read Papers on Pre-trained Language Models (PLMs)](https://github.com/thunlp/PLMpapers)
-- [東京大学深層学習（Deep Learning基礎講座2022）深層学習と自然言語処理](https://speakerdeck.com/verypluming/dong-jing-da-xue-shen-ceng-xue-xi-deep-learningji-chu-jiang-zuo-2022-shen-ceng-xue-xi-tozi-ran-yan-yu-chu-li?slide=68)
+- [東京大学深層学習（Deep Learning基礎講座2022）深層学習と自然言語処理](https://speakerdeck.com/verypluming/dong-jing-da-xue-shen-ceng-xue-xi-deep-learningji-chu-jiang-zuo-2022-shen-ceng-xue-xi-tozi-ran-yan-yu-chu-li)
 ### 論文検索システム
 - [Elicit](https://elicit.org/search) (GPT-3の応用)
