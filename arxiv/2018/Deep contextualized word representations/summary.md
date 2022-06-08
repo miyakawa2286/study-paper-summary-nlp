@@ -19,13 +19,14 @@
 - Our representations differ from traditional word type embeddings in that each token is assigned a representation that is **a function of the entire input sentence**.
   - They are computed on top of **two-layer biLMs** with **character convolutions** (Sec. 3.1), as a **linear function of the internal network states** (Sec. 3.2).
   -  traditional approaches for learning word vectors only allow a single **context-independent** representation for each word.
-  -  we show that the higher-level LSTM states capture
-     -  **context-dependent** aspects of word meaning (e.g., they can be used without modification to perform well on supervised word sense disambiguation tasks)
-     -  while lowerlevel states model aspects of syntax (e.g., they can be used to do part-of-speech tagging). 
+### 低レベルと高レベルのレイヤーには異なる情報が埋め込まれている
+- we show that the **higher-level LSTM states** capture
+  - **context-dependent** aspects of word meaning (e.g., they can be used without modification to perform well on supervised word sense disambiguation tasks)
+  - while **lower-level states** model aspects of syntax (e.g., they can be used to do part-of-speech tagging). 
 ### ディープだよね
-- Unlike previous approaches for learning contextualized word vectors (Peters et al., 2017; McCann et al., 2017), ELMo representations are **deep**, in the sense that they are a function of all of the internal layers of the biLM.
+- Unlike previous approaches for learning contextualized word vectors (Peters et al., 2017; McCann et al., 2017), ELMo representations are **deep**, in the sense that they are **a function of all of the internal layers** of the biLM.
   - we learn a **linear combination** of the vectors stacked above each input word for each end task
-  - Combining the internal states in this manner allows for very rich word representations.
+  - Combining the internal states in this manner **allows for very rich word representations**.
 ### 後段のタスクにシームレスに適用できるよ
 - Previously proposed methods overcome some of the shortcomings of traditional word vectors by either
   - enriching them with subword information (e.g., Wieting et al., 2016; Bojanowski et al., 2017)
@@ -42,7 +43,10 @@
 - In this paper, **we take full advantage of access to plentiful monolingual data**, and train our biLM on a corpus with approximately 30 million sentences (Chelba et al., 2014).
 
 ## 技術や手法の肝は?
-- none
+- leaern linear combination of the vectors stacked above each input word.
+  - 低レベルと高レベルのレイヤーには異なる情報が埋め込まれており, それらをまぜまぜすることで後段のタスクに有効であることを示す.
+  - まぜまぜする部分の係数はどうやって求めているのかわからんかった.
+    - fine-tuningのときに学習? でもシームレスとかいってたよな?
 
 ## どうやって有効だと検証した?
 - across six challenging NLP problems で実証実験.
@@ -75,4 +79,6 @@
 - pretraining -> fine-tuning を半教師ありと呼ぶのはやめてほしい.
 - モデルの全体図がないのでわかりずらい.
   - The pre-trained biLMs in this paper are similar to the architectures in Jozefowicz et al. (2016) and Kim et al. (2015), but **modified to support joint training of both directions** and **add a residual connection between LSTM layers.**
-- 気になった文: In some cases, **fine tuning the biLM on domain specific data leads to significant drops in perplexity and an increase in downstream task performance**.
+- 気になった文:
+  - 3.3:: Finally, we found it beneficial to add a moderate amount of **dropout** to ELMo (Srivastava et al., 2014) and in some cases to **regularize the ELMo weights** by adding λkwk 2 2 to the loss. This imposes an inductive bias on the ELMo weights to **stay close to an average of all biLM layers**.
+  - 3.4:: In some cases, **fine tuning the biLM on domain specific data leads to significant drops in perplexity and an increase in downstream task performance**.
