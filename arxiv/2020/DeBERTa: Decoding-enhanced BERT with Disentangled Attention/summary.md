@@ -59,17 +59,23 @@
 - Specifically, given a sequence X = {xi}, we corrupt it into X˜ by **masking 15% of its tokens at random** and then train a language model parameterized by θ to reconstruct X by predicting the masked tokens x˜ conditioned on X˜
 
 ## 先行研究と比べてどこがすごい?
-- 明示的に単語の位置情報を導入するアーキテクチャ(disentangled attention mechanism)により, 欠損していた相対位置情報を満たすよ(not only content-to-position, also position-to-content)
-  - The standard self-attention mechanism lacks a natural way to encode word position information.
-  - The positional bias can be implemented using absolute position embedding (Vaswani et al., 2017; Radford et al., 2019; Devlin et al., 2019) or relative position embedding (Huang et al., 2018; Yang et al., 2019).
-  - It has been shown that relative position representations are more effective for natural language understanding and generation tasks (Dai et al., 2019; Shaw et al., 2018).
-  - The proposed disentangled attention mechanism differs from all existing approaches in that we represent each input word using **two separate vectors** that encode a word’s content and position, and attention weights among words are computed using disentangled matrices on their contents and relative positions, respectively.
-  - Existing approaches to relative position encoding use a separate embedding matrix to compute the relative position bias in computing attention weights (Shaw et al., 2018; Huang et al., 2018).
-    -  This is equivalent to computing the attention weights **using only the content-to-content and content-to-position terms** in equation 2
-    -  We argue that the **position-to-content term is also important** since the attention weight of a word pair depends not only on their contents but on their relative positions, which **can only be fully modeled using both the content-to-position and position-to-content terms**.
+### 明示的に単語の位置情報を導入するアーキテクチャ(disentangled attention mechanism)により, 欠損していた相対位置情報を満たしたよ(not only content-to-position, also position-to-content)
+- The standard self-attention mechanism lacks a natural way to encode word position information.
+- The positional bias can be implemented using absolute position embedding (Vaswani et al., 2017; Radford et al., 2019; Devlin et al., 2019) or relative position embedding (Huang et al., 2018; Yang et al., 2019).
+- It has been shown that relative position representations are more effective for natural language understanding and generation tasks (Dai et al., 2019; Shaw et al., 2018).
+- The proposed disentangled attention mechanism differs from all existing approaches in that we represent each input word using **two separate vectors** that encode a word’s content and position, and attention weights among words are computed using disentangled matrices on their contents and relative positions, respectively.
+- Existing approaches to relative position encoding use a separate embedding matrix to compute the relative position bias in computing attention weights (Shaw et al., 2018; Huang et al., 2018).
+  -  This is equivalent to computing the attention weights **using only the content-to-content and content-to-position terms** in equation 2
+  -  We argue that the **position-to-content term is also important** since the attention weight of a word pair depends not only on their contents but on their relative positions, which **can only be fully modeled using both the content-to-position and position-to-content terms**.
+### 絶対位置情報をsoftmaxの直前に導入したよ. これにより, MLMで直接的に活用できるし, 相対位置情報モデリングから独立し邪魔にならないよ.
+- We conjecture that the **early incorporation of absolute positions used by BERT might undesirably hamper the model from learning sufficient information of relative positions**.
+- In addition, EMD also enables us to introduce other useful information, in addition to positions, for pre-training. We leave it to future work.
 
 ## 技術や手法の肝は?
-- none
+### Disentangled attention
+- 相対位置情報を取り入れるメカニズム
+### Enhanced mask decoder
+- 絶対位置情報を取り入れるメカニズム
 
 ## どうやって有効だと検証した?
 - none
