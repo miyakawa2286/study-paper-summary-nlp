@@ -1,2 +1,3 @@
-2022-04-14, num of papers: 18
-2022-05-18, num of papers: 31
+2022-04-14, cumsum num of papers: 18 (last: 0.95 paper/day)
+2022-05-18, cumsum num of papers: 31 (last: 0.38 paper/day, cumulative: 0.59 paper/day)
+2022-06-13, cumsum num of papers: 40 (last: 0.35 paper/day, cumulative: 0.51 paper/day)
