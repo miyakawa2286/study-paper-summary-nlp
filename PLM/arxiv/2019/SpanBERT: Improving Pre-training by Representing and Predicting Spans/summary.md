@@ -75,6 +75,7 @@
 ### 2022/6/16
 - 読みやすかった
 - 5.1の途中まで読んだ
+  - fine-tiningの方法が肝っぽいが, 読み飛ばしたので後で読む(4.1章)
 - 気になった文:
   - 3.3:: We conjecture that single-sequence training is superior to bi-sequence training with NSP because (a) the model benefits from longer full-length contexts, or (b) conditioning on, often unrelated, context from another document adds noise to the masked language model.
     - NSPがいらない子である理由,推測.
