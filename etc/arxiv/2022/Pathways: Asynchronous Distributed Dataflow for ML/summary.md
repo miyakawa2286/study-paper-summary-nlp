@@ -53,20 +53,22 @@
 - ![](img/figure2.png)
   - http://www.eccse.kobe-u.ac.jp/assets/images/simulation_school/kobe-hpc-summer-basic-2018/KHPCSS-2018-08.pdf
 
-- “single program multiple data” (SPMD)
-  - ![](img/figure3.png)
-    - https://www.cc.u-tokyo.ac.jp/events/lectures/X01/shiryou-2.pdf
+### “single program multiple data” (SPMD)
+- ![](img/figure3.png)
+  - https://www.cc.u-tokyo.ac.jp/events/lectures/X01/shiryou-2.pdf
 
-- “multiple program multiple data” (MPMD)
+### “multiple program multiple data” (MPMD)
 
-- データ並列性とモデル並列性
-  - ![](img/figure4.png)
-    - https://tech.preferred.jp/ja/blog/model-parallelism-in-dnn/
-  - データ並列では、全プロセスに同じモデルのコピーして訓練することでバッチサイズをプロセス数倍し、学習を高速化させる
-    - しかし、このような多数のGPUを用いて効率的に計算を行うのは多くの困難が伴います。そのうちの1つとして、データ並列型分散深層学習において、GPU同士の通信にかかる時間がボトルネックとなっていることが挙げられます。
-    - データ並列型分散深層学習では、異なるデータでモデルのパラメータでの損失関数の勾配を求めたあと、プロセス間で勾配の平均を求め、求めた平均を得られた勾配とみなして、モデルに適用を行います。この勾配の平均を求める操作として、多対多の通信を行う集団通信アルゴリズム：AllReduceが用いられています。
-  - 一方でモデル並列とは、1つのモデルを分割して複数のプロセスに配置し、全プロセスで協調して1つのモデルを訓練する手法
-    - 通信用の関数は、それぞれbackwardにおいて「勾配を逆向きに通信」するように設計されています。例えば bcast の場合、forward計算ではmasterからslaveに対して入力変数がbroadcast通信されます。一方で、backward計算ではslaveからmasterに対して勾配をallreduceします。
+### データ並列性とモデル並列性
+- ![](img/figure4.png)
+  - https://tech.preferred.jp/ja/blog/model-parallelism-in-dnn/
+- データ並列では、全プロセスに同じモデルのコピーして訓練することでバッチサイズをプロセス数倍し、学習を高速化させる
+  - しかし、このような多数のGPUを用いて効率的に計算を行うのは多くの困難が伴います
+  - そのうちの1つとして、データ並列型分散深層学習において、GPU同士の通信にかかる時間がボトルネックとなっていることが挙げられます。
+  - データ並列型分散深層学習では、異なるデータでモデルのパラメータでの損失関数の勾配を求めたあと、プロセス間で勾配の平均を求め、求めた平均を得られた勾配とみなして、モデルに適用を行います。
+    - この勾配の平均を求める操作として、多対多の通信を行う集団通信アルゴリズム：AllReduceが用いられています。
+- 一方でモデル並列とは、1つのモデルを分割して複数のプロセスに配置し、全プロセスで協調して1つのモデルを訓練する手法
+  - 通信用の関数は、それぞれbackwardにおいて「勾配を逆向きに通信」するように設計されています。例えば bcast の場合、forward計算ではmasterからslaveに対して入力変数がbroadcast通信されます。一方で、backward計算ではslaveからmasterに対して勾配をallreduceします。
 
 ## 感想
 ### 2022/6/20
